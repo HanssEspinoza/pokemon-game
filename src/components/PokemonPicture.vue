@@ -5,6 +5,11 @@
       pokemonId: {
         type: Number,
         required: true,
+      },
+      showPokemon: {
+        type: Boolean,
+        required: true,
+        default: false,
       }
     },
     computed: {
@@ -23,6 +28,7 @@
       alt="pokemon"
     >
     <img 
+      v-if="showPokemon"
       :src="imgSrc"
       class="fade-in"
       alt="pokemon"

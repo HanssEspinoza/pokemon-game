@@ -1,7 +1,10 @@
 <script lang="ts">
 
-  import PokemonOptions from '@/components/PokemonOptions.vue';
-  import PokemonPicture from '@/components/PokemonPicture.vue';
+  import PokemonOptions from '@/components/PokemonOptions.vue'
+  import PokemonPicture from '@/components/PokemonPicture.vue'
+  import getPokemonOptions from '@/helpers/getPokemonOptions'
+
+  console.log(getPokemonOptions())
 
   export default {
     components: { PokemonOptions, PokemonPicture }
@@ -11,7 +14,7 @@
 <template>
   <h1>¿Quién es este pokémon?</h1>
 
-  <PokemonPicture :pokemonId="4"/>
+  <PokemonPicture :pokemonId="6" :showPokemon="false"/>
   <PokemonOptions />
 </template>
 
